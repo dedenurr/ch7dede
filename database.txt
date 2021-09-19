@@ -1,6 +1,0 @@
-Room
-
-room_id
-name
-player1_id
-player2_id
