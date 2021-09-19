@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+/* Section navbar style */
+
+#navbarNav {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+}
+.navbar-brand {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+}
+.bg-fsw {
+  background-color: rgba(33, 37, 31, 0.3) !important;
+}
+/* #212529!important */
+/* Section Jumbroton / home style */
+.jumbotron {
+  padding-top: 2rem;
+  background-image: url('../assets/main-bg.jpg');
+  height: 100%;
+  background-size: cover;
+}
+.jumbotron h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  font-weight: bold;
+  margin-top: 200px;
+}
+.jumbotron h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.jumbotron a {
+  margin-top: 30px;
+}
+
+.next {
+  padding-top: 15%;
+  margin-bottom: 0;
+}
+
+.next a {
+  text-decoration: none;
+}
+.next a p {
+  color: white;
+}
+
+/* Section About stye */
+
+#about {
+  padding: 2rem;
+  background-image: url('../assets/the-games-bg.jpg');
+  height: 100%;
+  background-size: cover;
+}
+#about h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  font-weight: bold;
+}
+#about h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.to a {
+  text-decoration: none;
+  color: white;
+}
+/* Section Work style */
+#work {
+  padding: 2rem;
+  background-image: url('../assets/features.png');
+  height: 100%;
+  background-size: cover;
+}
+
+#work .row {
+  padding-top: 180px;
+}
+
+#work h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+#work h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#work p.features {
+  color: #fcb344;
+  margin-bottom: 25px;
+}
+
+#work p.features1 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+/* Style untuk requirements */
+#requirements {
+  padding: 2rem;
+  background-image: url('../assets/requirements.png');
+  height: 100%;
+  background-size: cover;
+}
+
+#requirements h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+td p {
+  color: white;
+}
+
+td p.requir {
+  color: #fcb344;
+}
+
+/* Style Top Scores */
+#topScores {
+  padding: 2rem;
+  background: url('../assets/bg5.png');
+  height: 100%;
+  background-size: cover;
+}
+
+#topScores h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.card-header img {
+  border-radius: 50%;
+}
+
+.card-header h5 {
+  color: #ffb548;
+  font-weight: bold;
+}
+
+/* NewsLetter */
+#newsLetter {
+  padding: 2rem;
+  background-image: url('../assets/image_newsletter.png');
+  background-repeat: no-repeat;
+  background-position: 25% 75%;
+  background-color: #080a0b;
+  height: 100%;
+}
+
+#newsLetter h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 80px;
+  font-weight: bold;
+}
+footer {
+  background-color: #080a0b;
+}
+.navbawah ul li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.navbawah ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbawah ul li a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+footer .col-md-5 img {
+  padding: 1rem;
+}
+
+footer hr {
+  margin-top: -10px;
+}
+
+.navbawah2 ul li {
+  display: inline-block;
+}
+
+.navbawah2 ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbawah2 ul li a:hover {
+  text-decoration: none;
+  color: grey;
+}

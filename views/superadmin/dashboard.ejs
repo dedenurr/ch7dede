@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row align-items-center mt-5">
+            <div class="col">
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">
+                            DASHBOARD
+                        </a>
+                        <a class="navbar-brand" href="/">
+                            LOGOUT
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="alert alert-primary " role="alert">
+                    <p><span class="fw-bold">READ operation </span>- Table user_game join user_game_biodata and
+                        user_game_history</p>
+                    <p>Click <span class="fw-bold">INSERT USER</span> to add a new user. Click <span
+                            class="fw-bold">UPDATE</span> to update user info.
+                        Click
+                        <span class="fw-bold">DELETE</span> to delete
+                        user
+                        and Click <span class="fw-bold">DETAIL</span> to view detail User.</p>
+                </div>
+                <a href="/addUser">
+                    <button type="button" class="btn btn-outline-primary btn-lg">INSERT USER</button></a>
+            </div>
+        </div>
+        <div class="row align-items-center mt-2">
+            <div class="col">
+                <form action="/dashboard" method="POST">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="6"></th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr align="center">
+                                <th colspan="6">USER DATA</th>
+
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for( let i = 0; i < userGameBiodata.length; i++ ) { %>
+
+
+                            <tr>
+                                <td><%= i+1 %> </td>
+                                <td><%= userGameBiodata[i].name %> </td>
+                                <td><%= userGameBiodata[i].email %></td>
+                                <td><%= userGameBiodata[i].gender %></td>
+                                <td><%= userGameBiodata[i].status %></td>
+                                <td>
+                                    <a href="/update-user?id=<%= userGameBiodata[i]._id  %>"
+                                        class="btn border-shadow update">
+                                        <button type="button" class="btn btn-success">Update</button>
+                                    </a>&nbsp;
+
+                                    <a class="delete" data-id=<%= userGameBiodata[i]._id %>>
+                                        <button type=" button" class="btn btn-danger">Delete</button></td>
+                                </a>
+
+                            </tr> <% } %>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/index.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Css Kostumku -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>MY Website Challeng Fw 13 Dede Nurrahman</title>
+</head>
+
+<body>
+    <!-- Section Jumbotron -->
+    <section id="home" class="jumbotron text-center">
+        <!-- Awal Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-fsw fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand" href="#home">LOGO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#requirements">WORK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#newsLetter">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">ABOUT US</a>
+                        </li>
+
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="/">SIGN UP</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Akhir Nav -->
+
+        <div>
+            <h1>PLAY TRADITIONAL GAME</h1>
+            <h3>EXPERIENCE NEW TRADITIONAL GAME PLAY.</h3>
+
+            <a class="btn btn-warning btn-lg" href="/game" role="button">PLAY NOW</a>
+        </div>
+
+        <div class="next">
+            <a href="#about">
+                <p>THE STORY</p>
+                <img src="assets/scroll down.svg" alt="down arrow">
+            </a>
+        </div>
+    </section>
+    <!-- End Jumbotron -->
+
+
+    <!-- Pop up Login -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Form Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="UserName" class="col-form-label" style="color: black;">User Name:</label>
+                            <input type="email" class="form-control" id="UserName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="col-form-label" style="color: black;">Password:</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-warning">Login</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Akhir Pop Up login -->
+    <!-- Pop Up Sign Up -->
+    <!-- <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Form Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="CreateUserName" class="col-form-label" style="color: black;">Buat Akun Dengan
+                                Email:</label>
+                            <input type="email" class="form-control" id="CreateUserName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="createPassword" class="col-form-label" style="color: black;">Buat
+                                Password:</label>
+                            <input type="password" class="form-control" id="createPassword">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-warning">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Akhir Pop Up Sign Up -->
+    <!-- Section About -->
+    <section id="about">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h3 class="to">
+                        <a href="/game">What's So Special?</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-md-4">
+                    <h1 class="to"><a href="/game">THE GAMES</a></h1>
+                </div>
+                <div class="col-md-8">
+                    <!-- slider -->
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="/game"> <img src="assets/rockpaperstrategy-1600.jpg" class="d-block w-100"
+                                        alt="..."></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="/game"><img src="assets/rockpaperstrategy-1600.jpg" class="d-block w-100"
+                                        alt="..."></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="/game"> <img src="assets/rockpaperstrategy-1600.jpg" class="d-block w-100"
+                                        alt="..."></a>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- end slider -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir About -->
+
+    <!-- section work -->
+    <section id="work">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7"></div>
+                <div class="col-md-3">
+
+                    <h3>WHAT'S SO SPECIAL</h3>
+
+                    <h1>FEATURES</h1>
+
+                    <p class="features"> TRADITIONAL GAMES</p>
+
+                    <p class="features1">If you Miss your chilhood provide many traditional games here</p>
+                    <p class="features">GAME SUIT</p>
+                    <p class="features">TBD</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+    <!-- end section work -->
+
+    <!-- section requirements -->
+    <section id="requirements">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-5">
+                    <div class="enter">
+                        <h1>SYSTEM</h1>
+                    </div>
+                    <h1>REQUIREMENTS</h1>
+                </div>
+                <div class="col-md-7">
+                    <p>Can My Computer Run This Game?</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>
+                                <p class="requir">OS:</p>
+                                <p>Windows 7 64-bit only (No OSX support at this time)</p>
+                            </td>
+                            <td>
+                                <p class="requir">PROCESSOR:</p>
+                                <p>Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="requir">MEMORY:</p>
+                                <p>4 GB RAM</p>
+                            </td>
+                            <td>
+                                <p class="requir">STORAGE:</p>
+                                <p>8 GB available space</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p class="requir">GRAPHICS: NVIDIA GeForce GTX 660 2GB or</p>
+                                <p>AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)</p>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-7"></div>
+            </div>
+        </div>
+    </section>
+    <!-- akhir requirements -->
+
+    <!-- Section Top Scores -->
+    <section id="topScores">
+        <div class="container ">
+            <div class="row justify-content-center ">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-3"> <img src="assets/image 8.jpg"></div>
+                                <div class="col mt-2">
+                                    <h5>Evan Lathi</h5>
+                                    <p>PC Gamer</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="assets/twitter.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <p class="card-text">"One of my gaming highlights of the year."
+                            </p>
+                            <span>October 18, 2018</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-2">
+                    <div class="col-md-4">
+                        <h1>TOP SCORES</h1>
+                        <p>THIS TOP SCORE FROM VARIOUS GAMES PROVIDE ON THIS PLATFORM</p>
+                        <a class="btn btn-warning btn-lg" href="#about" role="button" ">see
+                            more</a>
+                    </div>
+                    <div class=" col-md-3">
+                    </div>
+                    <div class="col-md-5 mt-3">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-md-3"> <img src="assets/image9.jpg"></div>
+                                    <div class="col mt-2">
+                                        <h5>Jada Grifin</h5>
+                                        <p>Nerdreactor</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/twitter.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">“The next big thing in the world of streaming and survival games.”
+                                </p><span>December 21, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-3">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-md-3"> <img src="assets/image10.jpg"></div>
+                                    <div class="col-md-6 mt-2">
+                                        <h5>Aaron Williams</h5>
+                                        <p>Uproxx</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/twitter.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”
+                                </p>
+                                <span>December 24, 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- Akhir Section Top Scores -->
+
+    <!-- News Letter -->
+    <section id="newsLetter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                </div>
+                <div class="col-md" style="padding-top: 130px;">
+                    <span>Want to Stay in touch?</span>
+                    <div class="row">
+                        <div class="col-md">
+                            <h1>NEWSLETTER </h1>
+                        </div>
+                        <div class="col-md"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md"></div>
+                        <div class="col-md-8">
+                            <h1>SUBSCRIBE</h1>
+                        </div>
+                    </div>
+                    <p>In order to start receiving our news, all you have to do is enter your email address. Everything
+                        else will be taken care of by us. We will send you emails containing information about game. We
+                        don’t spam.</p>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="mb-3">
+
+                                <input type="email" class="form-control mt-1" id="exampleFormControlInput1"
+                                    placeholder="name@example.com">
+                            </div>
+                        </div>
+                        <div class="col-md"><a class="btn btn-warning btn-lg" href="#" role="button-see">Subscribe
+                                now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Akhir News Letter -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 text-center">
+                    <div class="navbawah">
+                        <ul>
+                            <li><a href="">MAIN</a></li>
+                            <li><a href="">ABOUT</a></li>
+                            <li><a href="">GAME FEATURES</a></li>
+                            <li><a href="">SYSTEM REQUIREMENTS</a></li>
+                            <li><a href="">QUOTES</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="assets/facebook.svg" alt="">
+                    <img src="assets/twitter.svg" alt="">
+                    <img src="assets/Vector.svg" alt="">
+                    <img src="assets/twitch.svg" alt="">
+                </div>
+            </div>
+            <hr>
+            <div class="row  justify-content-center">
+                <div class="col-md-6 text-center"><span>© 2018 Your Games, Inc. All Rights Reserved</span></div>
+                <div class="col-md-6 text-center">
+                    <div class="navbawah2">
+                        <ul>
+                            <li><a href="">POLICY |</a></li>
+                            <li><a href="">TERMS OF SERVICES |</a></li>
+                            <li><a href="">CODE OF CONDUCT</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

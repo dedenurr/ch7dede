@@ -1,0 +1,146 @@
+* {
+  background-color: #ae876b;
+  max-width: 100%;
+  min-height: max-content;
+  font-family: sans-serif;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+}
+#header a {
+  text-decoration: none;
+  color: #724c21;
+  font-size: 4rem;
+  margin: 15px;
+}
+#header .logo {
+  margin: 15px;
+}
+#header h1 {
+  color: #f9b23d;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#content {
+  width: 50%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'pemain . komputer'
+    'pemain vs komputer'
+    'pemain . komputer'
+    '. refresh .';
+}
+#content img {
+  padding: 5px;
+  max-width: 35%;
+}
+
+#pemain {
+  grid-area: pemain;
+  text-align: center;
+  align-self: center;
+}
+
+#vs {
+  grid-area: vs;
+  text-align: center;
+  align-self: center;
+  color: #bd0000;
+
+  font-size: 5em;
+  font-weight: bold;
+}
+
+#komputer {
+  grid-area: komputer;
+  text-align: center;
+  align-self: center;
+}
+
+#refresh {
+  grid-area: refresh;
+  text-align: center;
+  cursor: pointer;
+}
+
+.batu,
+.gunting,
+.kertas {
+  transition: 0.1s;
+  position: relative;
+  cursor: pointer;
+}
+
+.batu:hover,
+.kertas:hover,
+.gunting:hover,
+.active {
+  box-shadow: 0px 0px 3px 3px rgb(159, 167, 159);
+  background-color: gray;
+}
+
+.pemenang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 70px;
+  background-color: darkgreen;
+  box-shadow: 0px 0px 3px 3px rgb(159, 167, 159);
+  color: white;
+  font-size: 20px;
+  margin: 3% auto;
+  border-radius: 8px;
+  transform: rotate(-25deg);
+}
+/* =================================== MOBILE VERSION ============================================= */
+@media (max-width: 992px) {
+  html,
+  body {
+    background-color: #ae876b;
+    font-family: sans-serif;
+    font-size: 12;
+  }
+
+  #content {
+    max-width: 50%;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-areas:
+      'pemain . komputer'
+      'pemain vs komputer'
+      'pemain . komputer'
+      '. refresh .';
+  }
+
+  #content img {
+    padding: 15px;
+    max-width: 50px;
+  }
+
+  #vs {
+    font-size: 3em;
+  }
+
+  .pemenang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 3rem;
+    background-color: darkgreen;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px auto;
+    border-radius: 8px;
+    transform: rotate(-25deg);
+  }
+}

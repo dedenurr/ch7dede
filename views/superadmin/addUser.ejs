@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        a {
+            text-decoration: none;
+            color: darkblue;
+        }
+    </style>
+    <title>Hello, world!</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row align-items-center mt-5">
+            <div class="col">
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">
+                            DASHBOARD
+                        </a>
+                        <a class="navbar-brand" href="/">
+                            LOGOUT
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="alert alert-primary " role="alert">
+                    <p>
+                        <h3>Insert Data User</h3>
+                        <a href="/dashboard">
+                            << all User</a> </p> </div> </div> </div> <form action="/api/users" method="POST"
+                                id="addUserGameBiodata">
+                                <div class="row mb-3">
+                                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-6">
+                                        <input type="hidden" name="id" value="">
+                                        <input type="text" name="name" class="form-control" id="name">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-6">
+                                        <input type="email" name="email" class="form-control" id="email">
+                                    </div>
+                                </div>
+                                <fieldset class="row mb-3">
+                                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="radio-2"
+                                                value="Male">
+                                            <label class="form-check-label" for="radio-2">
+                                                Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="radio-3"
+                                                value="Female">
+                                            <label class="form-check-label" for="radio-3">
+                                                Female
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="row mb-3">
+                                    <legend class="col-form-label col-sm-2 pt-0">Status</legend>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" id="radio-4"
+                                                value="Active">
+                                            <label class="form-check-label" for="radio-4">
+                                                Active
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" id="radio-5"
+                                                value="Inactive">
+                                            <label class="form-check-label" for="radio-5">
+                                                Inactive
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </fieldset>
+
+                                <div class="row mb-3">
+                                    <label for="username" class="col-sm-2 col-form-label">Username</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="username" class="form-control" id="username">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                                    <div class="col-sm-6">
+                                        <input type="password" name="password" class="form-control" id="password">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="gamehistory" class="col-sm-2 col-form-label">Game History</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" name="gamehistory" class="form-control" id="gamehistory">
+                                    </div>
+                                </div>
+
+                                <fieldset class="row mb-3">
+                                    <legend class="col-form-label col-sm-2 pt-0">Status Win</legend>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="statuswin" id="radio-6"
+                                                value="Win">
+                                            <label class="form-check-label" for="radio-6">
+                                                Win
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="statuswin" id="radio-7"
+                                                value="Lose">
+                                            <label class="form-check-label" for="radio-7">
+                                                Lose
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <button type="submit" class="btn btn-primary update">Save</button>
+                                </form>
+                </div>
+                <!-- Optional JavaScript; choose one of the two! -->
+
+                <!-- Option 1: Bootstrap Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+                    crossorigin="anonymous">
+                </script>
+                <!-- Jquery CDN -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+                    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="js/index.js"></script>
+                <!-- Option 2: Separate Popper and Bootstrap JS -->
+                <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
