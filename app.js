@@ -1,88 +1,76 @@
-//import module
 const express = require('express');
-const dotenv = require('dotenv');
+const expressLayouts = require('express-ejs-layouts');
+const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const path = require('path');
-
-const connectDB = require('./server/database/connection');
-
-//module express active
 const app = express();
 
-//initiation port to dotenv
-dotenv.config({ path: 'config.env' });
-const PORT = process.env.PORT || 8080;
+//passport config
+require('./config/passport')(passport);
+
+//DB Config
+const db = require('./config/keys').MongoURI;
 
 app.use(morgan('tiny'));
 
-connectDB();
+// connect to mongo
+mongoose
+  .connect(db, {
+    useNewUrlParser: true,
+    useFindAndModify: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('mongodb COnnected'))
+  .catch((err) => console.log(err));
 
 // use body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// use view engine ejs
+//EJS
+app.use(expressLayouts);
 app.set('view engine', 'ejs');
-// app.set('views', path.resolve(__dirname, 'views/ejs'));
 
 //load public
 app.use('/assets', express.static(path.resolve(__dirname, 'public/assets')));
 app.use('/css', express.static(path.resolve(__dirname, 'public/css')));
 app.use('/js', express.static(path.resolve(__dirname, 'public/js')));
 
-//built in middleware
-app.use(express.static('public'));
+// Bodyparser
+app.use(express.urlencoded({ extended: false }));
 
-app.use(express.json());
+// express session
+app.use(
+  session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 
-//run server
-app.listen(PORT, (req, res) => {
-  console.log(`Berhasil terhubung ke server http://localhost:${PORT}`);
-});
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
 
-//data user static
-const userData = {
-  username: 'dede',
-  password: '292929',
-  hobby: 'futsal',
-  address: 'Karawang',
-};
+// connect flash
+app.use(flash());
 
-//Internal Server Error Handler
-app.use((err, req, res, next) => {
-  console.log('Ada error');
-  console.log(typeof err);
-  if (err) {
-    console.log(err);
-  }
-  res.status(500).json({
-    status: 'error',
-    error: err,
-  });
-  next();
-});
-
-app.post('/dashboard', (req, res) => {
-  const loginReq = req.body;
-  if (loginReq.username !== userData.username) {
-    res.status(400).send({
-      message: 'succes delete data',
-    });
-  } else if (loginReq.password !== userData.password) {
-    res.status(400).send({ message: 'Password is incorrect' });
-  }
-  res.status(200).send({
-    message: 'Login Successful',
-    data: userData,
-  });
-});
-
-//Load routers
-app.use('/', require('./server/routes/router'));
-
-//404 handler
+//global vars
 app.use((req, res, next) => {
-  res.status(404).render('./404.ejs');
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
   next();
 });
+
+//routes
+app.use('/', require('./routes/routerok'));
+app.use('/users', require('./routes/users'));
+
+const PORT = process.env.PORT || 5050;
+
+app.listen(PORT, console.log(`Server is Running in Port http://localhost:${PORT}`));

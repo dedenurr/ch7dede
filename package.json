@@ -1,38 +1,34 @@
 {
-  "name": "ch6dede",
+  "name": "nodepassportlogin",
   "version": "1.0.0",
-  "description": "Chapter 5 Binar ",
+  "description": "latihan nodejs passportjs login auth",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [
+    "nodeJs",
     "express",
-    "node.js",
-    "javascript"
+    "passportjs"
   ],
-  "author": "Dede Nurrahman",
+  "author": "dede nurrahman",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "dotenv": "^10.0.0",
+    "connect-flash": "^0.1.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
     "mongoose": "^5.13.7",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.12",
-    "sweetalert2": "^11.1.4"
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dedenurr/ch6Dede.git"
-  },
-  "bugs": {
-    "url": "https://github.com/dedenurr/ch6Dede/issues"
-  },
-  "homepage": "https://github.com/dedenurr/ch6Dede#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }

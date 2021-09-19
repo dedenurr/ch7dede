@@ -14,7 +14,7 @@ $('#update_user').submit(function (event) {
   });
 
   var request = {
-    url: `http://localhost:5000/api/users/${data.id}`,
+    url: `http://localhost:5050/api/users/${data.id}`,
     method: 'PUT',
     data: data,
   };
@@ -30,7 +30,7 @@ if (window.location.pathname == '/dashboard') {
     var id = $(this).attr('data-id');
 
     var request = {
-      url: `http://localhost:5000/api/users/${id}`,
+      url: `http://localhost:5050/api/users/${id}`,
       method: 'DELETE',
     };
 
@@ -38,6 +38,7 @@ if (window.location.pathname == '/dashboard') {
       $.ajax(request).done(function () {
         alert('Data Deleted Successfully!');
         location.reload();
+        res.redirect('/dashboard');
       });
     }
   });
